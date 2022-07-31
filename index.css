@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
 :root {
-    --white: hsl(0, 0%, 100%);
-    --ligh-gray: hsl(212, 45%, 89%);
-    --light-blue: hsl(220, 15%, 55%);
-    --dark-blue: hsl(218, 44%, 22%);
+    --white: #ffffff;
+    --ligh-gray: #d6e2f0;
+    --light-blue: #7b879d;
+    --dark-blue: #1f3251;
     --font-size-paragraph: 15px;
 }
 
@@ -17,5 +17,77 @@
 body {
     font-family: 'Outfit', sans-serif;
     height: 100vh;
-    background-color: var(--light-blue);
+    background-color: var(--ligh-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,
+p {
+    text-align: center;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0.86em 0;
+}
+
+p {
+    font-weight: 400;
+    font-size: var(--font-size-paragraph);
+    margin: 1em 0;
+    color: var(--light-blue);
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 360px;
+    border-radius: 30px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 5px 2px #5f6b81b5;
+    height: auto;
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+}
+
+.photo-image {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.photo-image img {
+    width: 300px;
+    border-radius: 20px;
+    height: 300px;
+}
+
+@media screen and (min-width:375px) {
+    .wrapper {
+        max-width: 335px;
+        margin: 20px auto;
+    }
+
+    .photo-image img {
+        width: 275px;
+        height: 275px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 18px;
+    }
 }
